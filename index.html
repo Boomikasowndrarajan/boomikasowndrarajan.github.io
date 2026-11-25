@@ -1,2010 +1,1324 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Professional portfolio of Boomika Sowndrarajan, Executive Secretary and Hospital Management professional.">
-
-<title>Boomika Sowndrarajan | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-/* COLOUR PALETTE */
-
-:root {
-  --bg: #faf9f7;
-  --text: #25232b;
-  --muted: #686370;
-  --accent: #796598;
-  --light: #eeeaf5;
-  --white: #ffffff;
-  --border: #e6e1eb;
-}
-
-/* DARK MODE */
-
-[data-theme="dark"] {
-  --bg: #211f27;
-  --text: #faf9f7;
-  --muted: #c9c4d0;
-  --accent: #c8b7e5;
-  --light: #393244;
-  --white: #292631;
-  --border: #494352;
-}
-
-/* GENERAL STYLING */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 110px;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Manrope', Arial, sans-serif;
-  line-height: 1.8;
-  transition: background 0.4s, color 0.4s;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 4px;
-}
-
-.container {
-  width: min(1180px, 86%);
-  margin: auto;
-}
-
-/* NAVIGATION */
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 80px;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
-.nav-controls {
-  display: flex;
-  gap: 8px;
-}
-
-.theme-btn,
-.menu-btn {
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background: var(--white);
-  color: var(--text);
-  font-size: 18px;
-}
-
-.menu-btn {
-  display: none;
-}
-
-/* HERO SECTION */
-
-.hero {
-  padding: 90px 0 65px;
-  background: linear-gradient(
-    120deg,
-    var(--bg),
-    var(--light)
-  );
-}
-
-.hero-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
-}
-
-.label {
-  color: var(--accent);
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-.status {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.hero-content {
-  padding: 65px 0 45px;
-  animation: fadeUp 1s ease;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 8vw, 108px);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.065em;
-  overflow-wrap: anywhere;
-}
-
-.hero h1 span {
-  display: block;
-  color: var(--accent);
-}
-
-.hero-role {
-  font-size: clamp(16px, 2vw, 23px);
-  font-weight: 700;
-  margin-top: 30px;
-  max-width: 800px;
-}
-
-.hero-description {
-  max-width: 700px;
-  color: var(--muted);
-  font-size: 16px;
-  margin-top: 20px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 35px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 25px;
-  background: var(--text);
-  color: var(--bg);
-  border: 1px solid var(--text);
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
-  transform: translateY(-4px);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--text);
-}
-
-/* PROFESSIONAL INFORMATION STRIP */
-
-.info-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.info-item {
-  padding: 22px;
-}
-
-.info-item + .info-item {
-  border-left: 1px solid var(--border);
-}
-
-.info-item span {
-  display: block;
-  color: var(--accent);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 5px;
-}
-
-.info-item p {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* COMMON SECTIONS */
-
-section {
-  padding: 85px 0;
-}
-
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 35px;
-}
-
-.section-heading h2 {
-  font-size: clamp(32px, 5vw, 58px);
-  font-weight: 800;
-  letter-spacing: -3px;
-  line-height: 1.2;
-}
-
-.section-description {
-  color: var(--muted);
-  margin-bottom: 30px;
-  max-width: 800px;
-}
-
-/* ABOUT ME */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 55px;
-}
-
-.about-highlight {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: -1px;
-  color: var(--accent);
-}
-
-.about-text {
-  font-size: 16px;
-  color: var(--muted);
-}
-
-.about-text p {
-  margin-bottom: 18px;
-}
-
-/* INTERACTIVE EXPERTISE CARDS */
-
-#expertise {
-  background: var(--light);
-}
-
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
-  gap: 20px;
-}
-
-.expertise-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: border-color 0.3s,
-              box-shadow 0.3s,
-              transform 0.3s;
-}
-
-.expertise-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 12px 30px rgba(121,101,152,0.10);
-  transform: translateY(-3px);
-}
-
-.expertise-card.active {
-  border-color: var(--accent);
-  transform: none;
-}
-
-.card-button {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 100%;
-  min-height: 245px;
-  padding: 28px;
-  border: none;
-  background: transparent;
-  color: var(--text);
-}
-
-.card-button:focus-visible {
-  outline-offset: -5px;
-}
-
-.card-number {
-  font-size: 11px;
-  color: var(--accent);
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.card-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  width: 100%;
-}
-
-.card-title {
-  font-size: 23px;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.8px;
-}
-
-.plus-icon {
-  flex: 0 0 35px;
-  height: 35px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--light);
-  color: var(--accent);
-  font-size: 23px;
-  transition: transform 0.4s,
-              background 0.4s;
-}
-
-.active .plus-icon {
-  transform: rotate(45deg);
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.card-description {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
-  margin-top: 15px;
-  margin-bottom: 22px;
-}
-
-.explore-text {
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 800;
-  margin-top: auto;
-}
-
-/* EXPANDING ANIMATION */
-
-.card-details {
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition: grid-template-rows 0.45s ease,
-              opacity 0.35s ease;
-}
-
-.active .card-details {
-  grid-template-rows: 1fr;
-  opacity: 1;
-}
-
-.details-inner {
-  overflow: hidden;
-  min-height: 0;
-  padding: 0 28px;
-}
-
-.responsibility {
-  border-top: 1px solid var(--border);
-  padding: 20px 0;
-}
-
-.responsibility:last-child {
-  padding-bottom: 28px;
-}
-
-.responsibility h4 {
-  color: var(--accent);
-  font-size: 15px;
-  font-weight: 800;
-  margin-bottom: 7px;
-}
-
-.responsibility p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* EXPERIENCE SECTION */
-
-.job {
-  display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  gap: 30px;
-  border-top: 1px solid var(--border);
-  padding: 35px 0;
-}
-
-.job-date {
-  color: var(--accent);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-.job h3 {
-  font-size: 26px;
-  letter-spacing: -1px;
-}
-
-.company {
-  color: var(--accent);
-  font-weight: 700;
-  margin: 8px 0 18px;
-}
-
-.job ul {
-  padding-left: 20px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.job li {
-  margin-bottom: 9px;
-}
-
-/* SKILLS SECTION */
-
-#skills {
-  background: var(--light);
-}
-
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-
-.skill {
-  padding: 12px 20px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.skill:hover {
-  background: var(--accent);
-  color: var(--bg);
-  transform: translateY(-3px);
-}
-
-/* EDUCATION */
-
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.education-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  padding: 32px;
-  border-radius: 10px;
-}
-
-.education-card h3 {
-  font-size: 24px;
-  margin: 15px 0;
-  line-height: 1.4;
-}
-
-.education-card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* CONTACT */
-
-#contact {
-  background: var(--text);
-  color: var(--bg);
-}
-
-#contact h2 {
-  font-size: clamp(42px, 7vw, 85px);
-  font-weight: 800;
-  letter-spacing: -4px;
-  margin: 20px 0;
-  line-height: 1.2;
-}
-
-#contact p {
-  max-width: 650px;
-  opacity: 0.8;
-}
-
-#contact .btn {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
-}
-
-/* FOOTER */
-
-footer {
-  padding: 25px 0;
-  color: var(--muted);
-  font-size: 12px;
-  border-top: 1px solid var(--border);
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-/* SCROLL ANIMATION */
-
-.reveal {
-  transition: opacity 0.7s ease,
-              transform 0.7s ease;
-}
-
-.reveal.hidden-section {
-  opacity: 0;
-  transform: translateY(25px);
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* TABLET RESPONSIVE DESIGN */
-
-@media (max-width: 950px) {
-
-  .expertise-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .nav-links {
-    gap: 14px;
-  }
-
-  .about-grid {
-    gap: 30px;
-  }
-
-}
-
-/* MOBILE RESPONSIVE DESIGN */
-
-@media (max-width: 700px) {
-
-  .container {
-    width: 90%;
-  }
-
-  .nav-container {
-    min-height: 65px;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    background: var(--bg);
-    padding: 25px 5%;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .hero {
-    padding: 45px 0;
-  }
-
-  .hero-content {
-    padding: 45px 0;
-  }
-
-  .hero h1 {
-    font-size: clamp(40px, 10vw, 75px);
-  }
-
-  .hero-role {
-    font-size: 17px;
-  }
-
-  .hero-top {
-    flex-wrap: wrap;
-  }
-
-  section {
-    padding: 55px 0;
-  }
-
-  .section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .section-heading h2 {
-    letter-spacing: -1.5px;
-  }
-
-  .about-grid,
-  .expertise-grid,
-  .education-grid,
-  .job {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .about-highlight {
-    font-size: 25px;
-  }
-
-  .card-button {
-    min-height: 200px;
-    padding: 25px;
-  }
-
-  .details-inner {
-    padding: 0 25px;
-  }
-
-  .info-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .info-item + .info-item {
-    border-left: none;
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-content {
-    flex-direction: column;
-  }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  .reveal.hidden-section {
-    opacity: 1;
-    transform: none;
-  }
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Boomika Sowndrarajan, Executive Secretary and Hospital Management professional.">
+  <title>Boomika Sowndrarajan | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #25232b;
+      --muted: #686370;
+      --accent: #796598;
+      --light: #eeeaf5;
+      --white: #ffffff;
+      --border: #e6e1eb;
+    }
+
+    [data-theme="dark"] {
+      --bg: #211f27;
+      --text: #faf9f7;
+      --muted: #c9c4d0;
+      --accent: #c8b7e5;
+      --light: #393244;
+      --white: #292631;
+      --border: #494352;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', Arial, sans-serif;
+      line-height: 1.8;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1180px, 86%);
+      margin: auto;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 80px;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .theme-btn,
+    .menu-btn {
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    /* Introduction */
+    .hero {
+      padding: 90px 0 65px;
+      background: linear-gradient(120deg, var(--bg), var(--light));
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    .label {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .status {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-content {
+      padding: 65px 0 45px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 108px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.065em;
+      overflow-wrap: anywhere;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .hero-role {
+      font-size: clamp(16px, 2vw, 23px);
+      font-weight: 700;
+      margin-top: 30px;
+      max-width: 800px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      background: var(--text);
+      color: var(--bg);
+      border: 1px solid var(--text);
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+      transform: translateY(-4px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+    }
+
+    .info-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-item {
+      padding: 22px;
+    }
+
+    .info-item + .info-item {
+      border-left: 1px solid var(--border);
+    }
+
+    .info-item span {
+      display: block;
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .info-item p {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Sections */
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 800;
+      letter-spacing: -3px;
+      line-height: 1.2;
+    }
+
+    .section-description {
+      color: var(--muted);
+      margin-bottom: 30px;
+      max-width: 800px;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 55px;
+    }
+
+    .about-highlight {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: -1px;
+      color: var(--accent);
+    }
+
+    .about-text {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+    }
+
+    /* Expertise cards */
+    #expertise {
+      background: var(--light);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 20px;
+    }
+
+    .expertise-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .expertise-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(121, 101, 152, 0.10);
+      transform: translateY(-3px);
+    }
+
+    .expertise-card.active {
+      border-color: var(--accent);
+      transform: none;
+    }
+
+    .card-button {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+      min-height: 245px;
+      padding: 28px;
+      border: none;
+      background: transparent;
+      color: var(--text);
+    }
+
+    .card-button:focus-visible {
+      outline-offset: -5px;
+    }
+
+    .card-number {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .card-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: 23px;
+      line-height: 1.3;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+    }
+
+    .plus-icon {
+      flex: 0 0 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--light);
+      color: var(--accent);
+      font-size: 23px;
+      transition: transform 0.4s, background 0.4s;
+    }
+
+    .active .plus-icon {
+      transform: rotate(45deg);
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .card-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 15px;
+      margin-bottom: 22px;
+    }
+
+    .explore-text {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      margin-top: auto;
+    }
+
+    .card-details {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition: grid-template-rows 0.45s ease, opacity 0.35s ease;
+    }
+
+    .active .card-details {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+
+    .details-inner {
+      overflow: hidden;
+      min-height: 0;
+      padding: 0 28px;
+    }
+
+    .responsibility {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .responsibility:last-child {
+      padding-bottom: 28px;
+    }
+
+    .responsibility h4 {
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .responsibility p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* Experience */
+    .job {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      gap: 30px;
+      border-top: 1px solid var(--border);
+      padding: 35px 0;
+    }
+
+    .job-date {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .job h3 {
+      font-size: 26px;
+      letter-spacing: -1px;
+    }
+
+    .company {
+      color: var(--accent);
+      font-weight: 700;
+      margin: 8px 0 18px;
+    }
+
+    .job ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .job li {
+      margin-bottom: 9px;
+    }
+
+    /* Skills */
+    #skills {
+      background: var(--light);
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .skill {
+      padding: 12px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: translateY(-3px);
+    }
+
+    /* Education */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .education-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 32px;
+      border-radius: 10px;
+    }
+
+    .education-card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+      line-height: 1.4;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Contact */
+    #contact {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    #contact h2 {
+      font-size: clamp(42px, 7vw, 85px);
+      font-weight: 800;
+      letter-spacing: -4px;
+      margin: 20px 0;
+      line-height: 1.2;
+    }
+
+    #contact p {
+      max-width: 650px;
+      opacity: 0.8;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 48px;
+      margin-top: 30px;
+    }
+
+    .contact-details > div {
+      min-width: 0;
+    }
+
+    .contact-details dt {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-details a {
+      display: inline-block;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      overflow-wrap: anywhere;
+    }
+
+    /* Footer and animation */
+    footer {
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .reveal {
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.hidden-section {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 950px) {
+      .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .about-grid {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: 90%;
+      }
+
+      .nav-container {
+        min-height: 65px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--bg);
+        padding: 25px 5%;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero,
+      .hero-content {
+        padding: 45px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 10vw, 75px);
+      }
+
+      .hero-role {
+        font-size: 17px;
+      }
+
+      .hero-top {
+        flex-wrap: wrap;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .section-heading h2 {
+        letter-spacing: -1.5px;
+      }
+
+      .about-grid,
+      .expertise-grid,
+      .education-grid,
+      .job {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .about-highlight {
+        font-size: 25px;
+      }
+
+      .card-button {
+        min-height: 200px;
+        padding: 25px;
+      }
+
+      .details-inner {
+        padding: 0 25px;
+      }
+
+      .info-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .info-item + .info-item {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .reveal.hidden-section {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <nav>
+    <div class="container nav-container">
+      <a href="#home" class="logo">BS / PORTFOLIO</a>
 
-<!-- NAVIGATION -->
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-<nav>
-
-  <div class="container nav-container">
-
-    <a href="#home" class="logo">
-      BS / PORTFOLIO
-    </a>
-
-    <div class="nav-links" id="navLinks">
-
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-
+      <div class="nav-controls">
+        <button class="theme-btn" id="themeToggle" aria-label="Switch to dark mode">
+          &#9680;
+        </button>
+        <button class="menu-btn" id="menuToggle" aria-controls="navLinks"
+                aria-expanded="false" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <div class="nav-controls">
-
-      <button class="theme-btn"
-              id="themeToggle"
-              aria-label="Switch to dark mode">
-        &#9680;
-      </button>
-
-      <button class="menu-btn"
-              id="menuToggle"
-              aria-controls="navLinks"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-        &#9776;
-      </button>
-
-    </div>
-
-  </div>
-
-</nav>
-
-<!-- HOME SECTION -->
-
-<header class="hero" id="home">
-
-  <div class="container">
-
-    <div class="hero-top">
-
-      <div class="label">
-        Personal Portfolio / 2026
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="hero-top">
+        <div class="label">Personal Portfolio / 2026</div>
+        <div class="status">Professional Profile</div>
       </div>
 
-      <div class="status">
-        Professional Profile
-      </div>
-
-    </div>
-
-    <div class="hero-content">
-
-      <h1>
-        Boomika
-        <span>Sowndrarajan.</span>
-      </h1>
-
-      <p class="hero-role">
-        Executive Secretary. Healthcare Administration.
-        Project Coordination.
-      </p>
-
-      <p class="hero-description">
-
-        Bringing structure, clarity and efficiency to
-        executive operations, healthcare administration
-        and project coordination through purposeful
-        communication, organized workflows and
-        continuous professional development.
-
-      </p>
-
-      <div class="buttons">
-
-        <a href="#expertise" class="btn">
-          Explore My Work &#8599;
-        </a>
-
-        <a href="#contact" class="btn btn-outline">
-          Get in Touch &#8599;
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="info-strip">
-
-      <div class="info-item">
-
-        <span>CURRENT ROLE</span>
-
-        <p>Executive Secretary to CEO</p>
-
-      </div>
-
-      <div class="info-item">
-
-        <span>INDUSTRY</span>
-
-        <p>Healthcare Administration</p>
-
-      </div>
-
-      <div class="info-item">
-
-        <span>PROFESSIONAL FOCUS</span>
-
-        <p>Operations & Coordination</p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</header>
-
-<main>
-
-<!-- ABOUT ME -->
-
-<section id="about" class="reveal">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>About me.</h2>
-
-      <div class="label">01 / Introduction</div>
-
-    </div>
-
-    <div class="about-grid">
-
-      <div class="about-highlight">
-
-        Connecting people, processes and priorities
-        through purposeful coordination.
-
-      </div>
-
-      <div class="about-text">
-
-        <p>
-
-          I am an Executive Secretary with experience
-          in executive coordination, hospital
-          administration, documentation, operational
-          follow-ups and project coordination.
-
+      <div class="hero-content">
+        <h1>Boomika <span>Sowndrarajan.</span></h1>
+        <p class="hero-role">
+          Executive Secretary. Healthcare Administration. Project Coordination.
+        </p>
+        <p class="hero-description">
+          Bringing structure, clarity and efficiency to executive operations,
+          healthcare administration and project coordination through purposeful
+          communication, organized workflows and continuous professional development.
         </p>
 
-        <p>
+        <div class="buttons">
+          <!-- Save your PDF as resume.pdf in the same folder as index.html. -->
+          <a href="./resume.pdf" class="btn" download>Download Résumé (PDF) &#8595;</a>
+          <a href="#expertise" class="btn btn-outline">Explore My Work &#8599;</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch &#8599;</a>
+        </div>
+      </div>
 
-          My work involves supporting leadership,
-          coordinating with multiple departments,
-          tracking activities and ensuring that
-          important administrative and operational
-          requirements progress efficiently.
+      <div class="info-strip">
+        <div class="info-item">
+          <span>CURRENT ROLE</span>
+          <p>Executive Secretary to CEO</p>
+        </div>
+        <div class="info-item">
+          <span>INDUSTRY</span>
+          <p>Healthcare Administration</p>
+        </div>
+        <div class="info-item">
+          <span>PROFESSIONAL FOCUS</span>
+          <p>Operations &amp; Coordination</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section id="about" class="reveal">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About me.</h2>
+          <div class="label">01 / Introduction</div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-highlight">
+            Connecting people, processes and priorities through purposeful coordination.
+          </div>
+          <div class="about-text">
+            <p>
+              I am an Executive Secretary with experience in executive coordination,
+              hospital administration, documentation, operational follow-ups
+              and project coordination.
+            </p>
+            <p>
+              My work involves supporting leadership, coordinating with multiple
+              departments, tracking activities and ensuring that important
+              administrative and operational requirements progress efficiently.
+            </p>
+            <p>
+              I am passionate about digital productivity, artificial intelligence
+              tools, healthcare management and continuous professional development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="reveal">
+      <div class="container">
+        <div class="section-heading">
+          <h2>What I do.</h2>
+          <div class="label">02 / Expertise</div>
+        </div>
+        <p class="section-description">
+          Explore each area of expertise to discover my professional responsibilities and capabilities.
         </p>
 
+        <div class="expertise-grid">
+          <article class="expertise-card">
+            <button class="card-button" aria-expanded="false" aria-controls="expertise1">
+              <span class="card-number">01 / LEADERSHIP SUPPORT</span>
+              <span class="card-heading">
+                <span class="card-title">Executive Coordination</span>
+                <span class="plus-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="card-description">
+                Supporting executive priorities, leadership activities and administrative coordination.
+              </span>
+              <span class="explore-text">Explore responsibilities</span>
+            </button>
+
+            <div class="card-details" id="expertise1" inert>
+              <div class="details-inner">
+                <div class="responsibility">
+                  <h4>CEO Coordination</h4>
+                  <p>
+                    Support the CEO's day-to-day executive activities, coordinate with
+                    departmental teams, communicate instructions and track important action items.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Scheduling &amp; Calendar Management</h4>
+                  <p>
+                    Organize appointments, meetings, executive calendars and professional
+                    commitments while ensuring effective prioritization and time management.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Meeting Management</h4>
+                  <p>
+                    Coordinate meeting schedules, agendas, participant communication,
+                    documentation and post-meeting action-item follow-ups.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="expertise-card">
+            <button class="card-button" aria-expanded="false" aria-controls="expertise2">
+              <span class="card-number">02 / HEALTHCARE</span>
+              <span class="card-heading">
+                <span class="card-title">Hospital Administration</span>
+                <span class="plus-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="card-description">
+                Supporting organized healthcare operations and departmental administration.
+              </span>
+              <span class="explore-text">Explore responsibilities</span>
+            </button>
+
+            <div class="card-details" id="expertise2" inert>
+              <div class="details-inner">
+                <div class="responsibility">
+                  <h4>Departmental Coordination</h4>
+                  <p>
+                    Coordinate communication between hospital departments and follow up
+                    on administrative and operational requirements.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Administrative Support</h4>
+                  <p>
+                    Maintain organized documentation, support administrative activities
+                    and coordinate departmental requests.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Operational Follow-ups</h4>
+                  <p>
+                    Monitor pending activities, track departmental requirements
+                    and communicate progress to relevant stakeholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="expertise-card">
+            <button class="card-button" aria-expanded="false" aria-controls="expertise3">
+              <span class="card-number">03 / PROJECTS</span>
+              <span class="card-heading">
+                <span class="card-title">Project Coordination</span>
+                <span class="plus-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="card-description">
+                Keeping project activities, documentation and stakeholders aligned.
+              </span>
+              <span class="explore-text">Explore responsibilities</span>
+            </button>
+
+            <div class="card-details" id="expertise3" inert>
+              <div class="details-inner">
+                <div class="responsibility">
+                  <h4>Project Documentation</h4>
+                  <p>
+                    Organize project drawings, revised documents, consultant correspondence
+                    and coordination records.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Progress Tracking</h4>
+                  <p>
+                    Monitor project activities, pending requirements, drawing revisions
+                    and action items requiring follow-up.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Stakeholder Communication</h4>
+                  <p>
+                    Coordinate communication between consultants, project teams, management
+                    and other relevant stakeholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="expertise-card">
+            <button class="card-button" aria-expanded="false" aria-controls="expertise4">
+              <span class="card-number">04 / INFRASTRUCTURE</span>
+              <span class="card-heading">
+                <span class="card-title">MEP Coordination</span>
+                <span class="plus-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="card-description">
+                Supporting technical coordination for hospital infrastructure and building services.
+              </span>
+              <span class="explore-text">Explore responsibilities</span>
+            </button>
+
+            <div class="card-details" id="expertise4" inert>
+              <div class="details-inner">
+                <div class="responsibility">
+                  <h4>HVAC Coordination</h4>
+                  <p>
+                    Support air-conditioning allocation, ventilation requirements,
+                    chiller plant documentation and HVAC drawing coordination.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Electrical &amp; Plumbing Coordination</h4>
+                  <p>
+                    Coordinate building service requirements, electrical layouts,
+                    plumbing layouts and related consultant communications.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Drawing Review Support</h4>
+                  <p>
+                    Assist in identifying coordination discrepancies, tracking drawing revisions
+                    and communicating observations to technical consultants for review.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="expertise-card">
+            <button class="card-button" aria-expanded="false" aria-controls="expertise5">
+              <span class="card-number">05 / TECHNOLOGY</span>
+              <span class="card-heading">
+                <span class="card-title">Digital Productivity</span>
+                <span class="plus-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="card-description">
+                Using digital tools and AI to improve everyday professional workflows.
+              </span>
+              <span class="explore-text">Explore responsibilities</span>
+            </button>
+
+            <div class="card-details" id="expertise5" inert>
+              <div class="details-inner">
+                <div class="responsibility">
+                  <h4>Artificial Intelligence Tools</h4>
+                  <p>
+                    Explore AI-assisted professional documentation, communication,
+                    reporting and productivity workflows.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Digital Organization</h4>
+                  <p>
+                    Organize professional documents, spreadsheets, task lists, calendars
+                    and digital information.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Workflow Improvement</h4>
+                  <p>
+                    Identify opportunities to simplify repetitive administrative activities
+                    and improve organizational efficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="expertise-card">
+            <button class="card-button" aria-expanded="false" aria-controls="expertise6">
+              <span class="card-number">06 / COMMUNICATION</span>
+              <span class="card-heading">
+                <span class="card-title">Management Reporting</span>
+                <span class="plus-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="card-description">
+                Transforming operational information into structured management updates.
+              </span>
+              <span class="explore-text">Explore responsibilities</span>
+            </button>
+
+            <div class="card-details" id="expertise6" inert>
+              <div class="details-inner">
+                <div class="responsibility">
+                  <h4>Daily Activity Reports</h4>
+                  <p>
+                    Prepare structured executive activity summaries, meeting updates
+                    and daily operational reports.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Management Updates</h4>
+                  <p>
+                    Compile weekly and monthly management reports, activity summaries
+                    and professional presentations.
+                  </p>
+                </div>
+                <div class="responsibility">
+                  <h4>Action Tracking</h4>
+                  <p>
+                    Maintain follow-up lists, monitor pending responsibilities
+                    and communicate progress for management review.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Career journey.</h2>
+          <div class="label">03 / Experience</div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">CURRENT ROLE</div>
+          <div>
+            <h3>Executive Secretary to CEO</h3>
+            <p class="company">Ahana Hospitals</p>
+            <ul>
+              <li>Coordinate executive schedules and meetings.</li>
+              <li>Prepare weekly and monthly management updates.</li>
+              <li>Coordinate departmental follow-ups and activity reports.</li>
+              <li>Support hospital project coordination and documentation.</li>
+              <li>Assist with MEP and infrastructure coordination.</li>
+              <li>Track pending tasks and communicate with stakeholders.</li>
+              <li>Support administrative and operational requirements.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">2024 - 2025</div>
+          <div>
+            <h3>Previous Professional Experience</h3>
+            <p class="company">Agarwals</p>
+            <ul>
+              <li>Administrative and coordination responsibilities.</li>
+              <li>Supported incentive-related activities.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="container">
+        <div class="section-heading">
+          <h2>My toolkit.</h2>
+          <div class="label">04 / Professional Skills</div>
+        </div>
+        <p class="section-description">
+          A combination of administrative, organizational, technical coordination and digital capabilities.
+        </p>
+        <div class="skill-list">
+          <span class="skill">Executive Coordination</span>
+          <span class="skill">Hospital Administration</span>
+          <span class="skill">Project Coordination</span>
+          <span class="skill">MEP Coordination</span>
+          <span class="skill">Meeting Management</span>
+          <span class="skill">Calendar Management</span>
+          <span class="skill">Management Reporting</span>
+          <span class="skill">Documentation</span>
+          <span class="skill">Microsoft Office</span>
+          <span class="skill">Google Workspace</span>
+          <span class="skill">Artificial Intelligence Tools</span>
+          <span class="skill">Stakeholder Coordination</span>
+          <span class="skill">Digital Productivity</span>
+          <span class="skill">Time Management</span>
+          <span class="skill">Follow-up Management</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="reveal">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Always learning.</h2>
+          <div class="label">05 / Education</div>
+        </div>
+
+        <div class="education-grid">
+          <div class="education-card">
+            <div class="label">POSTGRADUATE</div>
+            <h3>MBA - Hospital Management</h3>
+            <p>Alagappa University</p>
+            <p>Currently Pursuing</p>
+          </div>
+          <div class="education-card">
+            <div class="label">UNDERGRADUATE</div>
+            <h3>Bachelor of Business Administration</h3>
+            <p>BBA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="label">06 / Get in Touch</div>
+        <h2>Let's connect.</h2>
         <p>
-
-          I am passionate about digital productivity,
-          artificial intelligence tools, healthcare
-          management and continuous professional
-          development.
-
+          Open to meaningful professional connections, opportunities for growth
+          and collaborations in healthcare administration, executive support
+          and project coordination.
         </p>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- INTERACTIVE EXPERTISE SECTION -->
-
-<section id="expertise" class="reveal">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>What I do.</h2>
-
-      <div class="label">02 / Expertise</div>
-
-    </div>
-
-    <p class="section-description">
-
-      Explore each area of expertise to discover
-      my professional responsibilities and capabilities.
-
-    </p>
-
-    <div class="expertise-grid">
-
-      <!-- CARD 01 -->
-
-      <article class="expertise-card">
-
-        <button class="card-button"
-                aria-expanded="false"
-                aria-controls="expertise1">
-
-          <span class="card-number">
-            01 / LEADERSHIP SUPPORT
-          </span>
-
-          <span class="card-heading">
-
-            <span class="card-title">
-              Executive Coordination
-            </span>
-
-            <span class="plus-icon"
-                  aria-hidden="true">+</span>
-
-          </span>
-
-          <span class="card-description">
-
-            Supporting executive priorities,
-            leadership activities and administrative
-            coordination.
-
-          </span>
-
-          <span class="explore-text">
-            Explore responsibilities
-          </span>
-
-        </button>
-
-        <div class="card-details" id="expertise1" inert>
-
-          <div class="details-inner">
-
-            <div class="responsibility">
-
-              <h4>CEO Coordination</h4>
-
-              <p>
-
-                Support the CEO's day-to-day executive
-                activities, coordinate with departmental
-                teams, communicate instructions and
-                track important action items.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Scheduling & Calendar Management</h4>
-
-              <p>
-
-                Organize appointments, meetings,
-                executive calendars and professional
-                commitments while ensuring effective
-                prioritization and time management.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Meeting Management</h4>
-
-              <p>
-
-                Coordinate meeting schedules,
-                agendas, participant communication,
-                documentation and post-meeting
-                action-item follow-ups.
-
-              </p>
-
-            </div>
-
+        <!-- Replace the example email and phone number in both the href and the visible text.
+             Use your country code and digits without spaces in the tel: link. -->
+        <dl class="contact-details">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:boomikasowndrarajan@gmail.com">you@example.com</a></dd>
           </div>
-
-        </div>
-
-      </article>
-
-      <!-- CARD 02 -->
-
-      <article class="expertise-card">
-
-        <button class="card-button"
-                aria-expanded="false"
-                aria-controls="expertise2">
-
-          <span class="card-number">
-            02 / HEALTHCARE
-          </span>
-
-          <span class="card-heading">
-
-            <span class="card-title">
-              Hospital Administration
-            </span>
-
-            <span class="plus-icon"
-                  aria-hidden="true">+</span>
-
-          </span>
-
-          <span class="card-description">
-
-            Supporting organized healthcare operations
-            and departmental administration.
-
-          </span>
-
-          <span class="explore-text">
-            Explore responsibilities
-          </span>
-
-        </button>
-
-        <div class="card-details" id="expertise2" inert>
-
-          <div class="details-inner">
-
-            <div class="responsibility">
-
-              <h4>Departmental Coordination</h4>
-
-              <p>
-
-                Coordinate communication between
-                hospital departments and follow up
-                on administrative and operational
-                requirements.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Administrative Support</h4>
-
-              <p>
-
-                Maintain organized documentation,
-                support administrative activities
-                and coordinate departmental requests.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Operational Follow-ups</h4>
-
-              <p>
-
-                Monitor pending activities, track
-                departmental requirements and communicate
-                progress to relevant stakeholders.
-
-              </p>
-
-            </div>
-
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+91 7904063038">+1 202 555 0147</a></dd>
           </div>
+        </dl>
 
+        <!-- To show your LinkedIn link, replace YOUR_LINKEDIN_URL and remove these comment markers.
+        <div class="buttons">
+          <a href="YOUR_LINKEDIN_URL" class="btn"
+             target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a>
         </div>
-
-      </article>
-
-      <!-- CARD 03 -->
-
-      <article class="expertise-card">
-
-        <button class="card-button"
-                aria-expanded="false"
-                aria-controls="expertise3">
-
-          <span class="card-number">
-            03 / PROJECTS
-          </span>
-
-          <span class="card-heading">
-
-            <span class="card-title">
-              Project Coordination
-            </span>
-
-            <span class="plus-icon"
-                  aria-hidden="true">+</span>
-
-          </span>
-
-          <span class="card-description">
-
-            Keeping project activities, documentation
-            and stakeholders aligned.
-
-          </span>
-
-          <span class="explore-text">
-            Explore responsibilities
-          </span>
-
-        </button>
-
-        <div class="card-details" id="expertise3" inert>
-
-          <div class="details-inner">
-
-            <div class="responsibility">
-
-              <h4>Project Documentation</h4>
-
-              <p>
-
-                Organize project drawings, revised
-                documents, consultant correspondence
-                and coordination records.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Progress Tracking</h4>
-
-              <p>
-
-                Monitor project activities, pending
-                requirements, drawing revisions and
-                action items requiring follow-up.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Stakeholder Communication</h4>
-
-              <p>
-
-                Coordinate communication between
-                consultants, project teams, management
-                and other relevant stakeholders.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-
-      <!-- CARD 04 -->
-
-      <article class="expertise-card">
-
-        <button class="card-button"
-                aria-expanded="false"
-                aria-controls="expertise4">
-
-          <span class="card-number">
-            04 / INFRASTRUCTURE
-          </span>
-
-          <span class="card-heading">
-
-            <span class="card-title">
-              MEP Coordination
-            </span>
-
-            <span class="plus-icon"
-                  aria-hidden="true">+</span>
-
-          </span>
-
-          <span class="card-description">
-
-            Supporting technical coordination for
-            hospital infrastructure and building services.
-
-          </span>
-
-          <span class="explore-text">
-            Explore responsibilities
-          </span>
-
-        </button>
-
-        <div class="card-details" id="expertise4" inert>
-
-          <div class="details-inner">
-
-            <div class="responsibility">
-
-              <h4>HVAC Coordination</h4>
-
-              <p>
-
-                Support air-conditioning allocation,
-                ventilation requirements, chiller plant
-                documentation and HVAC drawing
-                coordination.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Electrical & Plumbing Coordination</h4>
-
-              <p>
-
-                Coordinate building service requirements,
-                electrical layouts, plumbing layouts
-                and related consultant communications.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Drawing Review Support</h4>
-
-              <p>
-
-                Assist in identifying coordination
-                discrepancies, tracking drawing revisions
-                and communicating observations to
-                technical consultants for review.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-
-      <!-- CARD 05 -->
-
-      <article class="expertise-card">
-
-        <button class="card-button"
-                aria-expanded="false"
-                aria-controls="expertise5">
-
-          <span class="card-number">
-            05 / TECHNOLOGY
-          </span>
-
-          <span class="card-heading">
-
-            <span class="card-title">
-              Digital Productivity
-            </span>
-
-            <span class="plus-icon"
-                  aria-hidden="true">+</span>
-
-          </span>
-
-          <span class="card-description">
-
-            Using digital tools and AI to improve
-            everyday professional workflows.
-
-          </span>
-
-          <span class="explore-text">
-            Explore responsibilities
-          </span>
-
-        </button>
-
-        <div class="card-details" id="expertise5" inert>
-
-          <div class="details-inner">
-
-            <div class="responsibility">
-
-              <h4>Artificial Intelligence Tools</h4>
-
-              <p>
-
-                Explore AI-assisted professional
-                documentation, communication,
-                reporting and productivity workflows.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Digital Organization</h4>
-
-              <p>
-
-                Organize professional documents,
-                spreadsheets, task lists, calendars
-                and digital information.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Workflow Improvement</h4>
-
-              <p>
-
-                Identify opportunities to simplify
-                repetitive administrative activities
-                and improve organizational efficiency.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-
-      <!-- CARD 06 -->
-
-      <article class="expertise-card">
-
-        <button class="card-button"
-                aria-expanded="false"
-                aria-controls="expertise6">
-
-          <span class="card-number">
-            06 / COMMUNICATION
-          </span>
-
-          <span class="card-heading">
-
-            <span class="card-title">
-              Management Reporting
-            </span>
-
-            <span class="plus-icon"
-                  aria-hidden="true">+</span>
-
-          </span>
-
-          <span class="card-description">
-
-            Transforming operational information
-            into structured management updates.
-
-          </span>
-
-          <span class="explore-text">
-            Explore responsibilities
-          </span>
-
-        </button>
-
-        <div class="card-details" id="expertise6" inert>
-
-          <div class="details-inner">
-
-            <div class="responsibility">
-
-              <h4>Daily Activity Reports</h4>
-
-              <p>
-
-                Prepare structured executive activity
-                summaries, meeting updates and daily
-                operational reports.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Management Updates</h4>
-
-              <p>
-
-                Compile weekly and monthly management
-                reports, activity summaries and
-                professional presentations.
-
-              </p>
-
-            </div>
-
-            <div class="responsibility">
-
-              <h4>Action Tracking</h4>
-
-              <p>
-
-                Maintain follow-up lists, monitor
-                pending responsibilities and communicate
-                progress for management review.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- EXPERIENCE SECTION -->
-
-<section id="experience" class="reveal">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>Career journey.</h2>
-
-      <div class="label">03 / Experience</div>
-
-    </div>
-
-    <div class="job">
-
-      <div class="job-date">
-
-        CURRENT ROLE
-
+        -->
       </div>
+    </section>
+  </main>
 
-      <div>
-
-        <h3>Executive Secretary to CEO</h3>
-
-        <p class="company">Ahana Hospitals</p>
-
-        <ul>
-
-          <li>Coordinate executive schedules and meetings.</li>
-
-          <li>Prepare weekly and monthly management updates.</li>
-
-          <li>Coordinate departmental follow-ups and activity reports.</li>
-
-          <li>Support hospital project coordination and documentation.</li>
-
-          <li>Assist with MEP and infrastructure coordination.</li>
-
-          <li>Track pending tasks and communicate with stakeholders.</li>
-
-          <li>Support administrative and operational requirements.</li>
-
-        </ul>
-
-      </div>
-
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Boomika Sowndrarajan. All Rights Reserved.</p>
+      <a href="#home">Back to top &#8593;</a>
     </div>
-
-    <div class="job">
-
-      <div class="job-date">
-
-        2024 - 2025
-
-      </div>
-
-      <div>
-
-        <h3>Previous Professional Experience</h3>
-
-        <p class="company">Agarwals</p>
-
-        <ul>
-
-          <li>Administrative and coordination responsibilities.</li>
-
-          <li>Supported incentive-related activities.</li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- SKILLS SECTION -->
-
-<section id="skills" class="reveal">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>My toolkit.</h2>
-
-      <div class="label">04 / Professional Skills</div>
-
-    </div>
-
-    <p class="section-description">
-
-      A combination of administrative, organizational,
-      technical coordination and digital capabilities.
-
-    </p>
-
-    <div class="skill-list">
-
-      <span class="skill">Executive Coordination</span>
-
-      <span class="skill">Hospital Administration</span>
-
-      <span class="skill">Project Coordination</span>
-
-      <span class="skill">MEP Coordination</span>
-
-      <span class="skill">Meeting Management</span>
-
-      <span class="skill">Calendar Management</span>
-
-      <span class="skill">Management Reporting</span>
-
-      <span class="skill">Documentation</span>
-
-      <span class="skill">Microsoft Office</span>
-
-      <span class="skill">Google Workspace</span>
-
-      <span class="skill">Artificial Intelligence Tools</span>
-
-      <span class="skill">Stakeholder Coordination</span>
-
-      <span class="skill">Digital Productivity</span>
-
-      <span class="skill">Time Management</span>
-
-      <span class="skill">Follow-up Management</span>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- EDUCATION SECTION -->
-
-<section id="education" class="reveal">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>Always learning.</h2>
-
-      <div class="label">05 / Education</div>
-
-    </div>
-
-    <div class="education-grid">
-
-      <div class="education-card">
-
-        <div class="label">
-
-          POSTGRADUATE
-
-        </div>
-
-        <h3>MBA - Hospital Management</h3>
-
-        <p>Alagappa University</p>
-
-        <p>Currently Pursuing</p>
-
-      </div>
-
-      <div class="education-card">
-
-        <div class="label">
-
-          UNDERGRADUATE
-
-        </div>
-
-        <h3>Bachelor of Business Administration</h3>
-
-        <p>BBA</p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CONTACT SECTION -->
-
-<section id="contact">
-
-  <div class="container">
-
-    <div class="label">
-
-      06 / Get in Touch
-
-    </div>
-
-    <h2>Let's connect.</h2>
-
-    <p>
-
-      Open to meaningful professional connections,
-      opportunities for growth and collaborations
-      in healthcare administration, executive support
-      and project coordination.
-
-    </p>
-
-    <!--
-    Replace your email and LinkedIn details
-    and remove the comment markers.
-
-    <div class="buttons">
-
-      <a href="mailto:YOUR_EMAIL@example.com"
-         class="btn">
-
-        Email Me &#8599;
-
-      </a>
-
-      <a href="YOUR_LINKEDIN_URL"
-         class="btn"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        LinkedIn &#8599;
-
-      </a>
-
-    </div>
-
-    -->
-
-  </div>
-
-</section>
-
-</main>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container footer-content">
-
-    <p>
-
-      &copy; 2026 Boomika Sowndrarajan.
-      All Rights Reserved.
-
-    </p>
-
-    <a href="#home">
-
-      Back to top &#8593;
-
-    </a>
-
-  </div>
-
-</footer>
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-/* EXPERTISE CARD ANIMATION */
-
-const cardButtons =
-  document.querySelectorAll('.card-button');
-
-cardButtons.forEach(button => {
-
-  button.addEventListener('click', () => {
-
-    const card =
-      button.closest('.expertise-card');
-
-    const isOpen =
-      card.classList.contains('active');
-
-    const details =
-      document.getElementById(
-        button.getAttribute('aria-controls')
-      );
-
-    card.classList.toggle('active', !isOpen);
-
-    button.setAttribute(
-      'aria-expanded',
-      String(!isOpen)
-    );
-
-    details.inert = isOpen;
-
-    const exploreText =
-      button.querySelector('.explore-text');
-
-    exploreText.textContent = isOpen
-      ? 'Explore responsibilities'
-      : 'Close responsibilities';
-
-  });
-
-});
-
-/* DARK MODE */
-
-const themeToggle =
-  document.getElementById('themeToggle');
-
-function setTheme(theme) {
-
-  document.documentElement.setAttribute(
-    'data-theme',
-    theme
-  );
-
-  themeToggle.textContent =
-    theme === 'dark' ? '☀' : '◐';
-
-  themeToggle.setAttribute(
-    'aria-label',
-    theme === 'dark'
-      ? 'Switch to light mode'
-      : 'Switch to dark mode'
-  );
-
-}
-
-let savedTheme = 'light';
-
-try {
-
-  savedTheme =
-    localStorage.getItem('portfolio-theme')
-    || 'light';
-
-} catch (error) {}
-
-setTheme(
-  savedTheme === 'dark' ? 'dark' : 'light'
-);
-
-themeToggle.addEventListener('click', () => {
-
-  const currentTheme =
-    document.documentElement.getAttribute(
-      'data-theme'
-    );
-
-  const nextTheme =
-    currentTheme === 'dark'
-      ? 'light'
-      : 'dark';
-
-  setTheme(nextTheme);
-
-  try {
-
-    localStorage.setItem(
-      'portfolio-theme',
-      nextTheme
-    );
-
-  } catch (error) {}
-
-});
-
-/* MOBILE NAVIGATION */
-
-const menuToggle =
-  document.getElementById('menuToggle');
-
-const navLinks =
-  document.getElementById('navLinks');
-
-function closeMenu() {
-
-  navLinks.classList.remove('open');
-
-  menuToggle.setAttribute(
-    'aria-expanded',
-    'false'
-  );
-
-  menuToggle.textContent = '☰';
-
-}
-
-menuToggle.addEventListener('click', () => {
-
-  const isOpen =
-    navLinks.classList.toggle('open');
-
-  menuToggle.setAttribute(
-    'aria-expanded',
-    String(isOpen)
-  );
-
-  menuToggle.textContent =
-    isOpen ? '×' : '☰';
-
-});
-
-navLinks.querySelectorAll('a').forEach(link => {
-
-  link.addEventListener('click', closeMenu);
-
-});
-
-document.addEventListener('keydown', event => {
-
-  if (
-    event.key === 'Escape' &&
-    navLinks.classList.contains('open')
-  ) {
-
-    closeMenu();
-
-    menuToggle.focus();
-
-  }
-
-});
-
-/* SCROLL REVEAL ANIMATION */
-
-if (
-  'IntersectionObserver' in window &&
-  !window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches
-) {
-
-  const observer = new IntersectionObserver(
-    entries => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.remove(
-            'hidden-section'
-          );
-
-          observer.unobserve(entry.target);
-
-        }
-
+  </footer>
+
+  <script>
+    const cardButtons = document.querySelectorAll('.card-button');
+
+    cardButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.expertise-card');
+        const isOpen = card.classList.contains('active');
+        const details = document.getElementById(button.getAttribute('aria-controls'));
+
+        card.classList.toggle('active', !isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
+        details.inert = isOpen;
+
+        const exploreText = button.querySelector('.explore-text');
+        exploreText.textContent = isOpen ? 'Explore responsibilities' : 'Close responsibilities';
       });
-
-    },
-    {
-      threshold: 0.08
-    }
-  );
-
-  document.querySelectorAll('.reveal')
-    .forEach(section => {
-
-      section.classList.add('hidden-section');
-
-      observer.observe(section);
-
     });
 
-}
+    const themeToggle = document.getElementById('themeToggle');
 
-</script>
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeToggle.textContent = theme === 'dark' ? '☀' : '◐';
+      themeToggle.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+      );
+    }
 
+    let savedTheme = 'light';
+
+    try {
+      savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+    } catch (error) {
+      // The theme toggle still works when browser storage is unavailable.
+    }
+
+    setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(nextTheme);
+
+      try {
+        localStorage.setItem('portfolio-theme', nextTheme);
+      } catch (error) {
+        // Keep the selected theme for the current page.
+      }
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+
+    if (
+      'IntersectionObserver' in window &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('hidden-section');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('.reveal').forEach(section => {
+        section.classList.add('hidden-section');
+        observer.observe(section);
+      });
+    }
+  </script>
 </body>
 </html>
+```
