@@ -840,19 +840,9 @@
     </div>
 
     <div class="about-grid">
-      <div>
-        <p class="about-highlight">
-          Connecting people, processes and priorities through purposeful coordination.
-        </p>
-
-        <dl style="margin-top: 24px;">
-          <dt><strong>Residence</strong></dt>
-          <dd>[City, State]</dd>
-
-          <dt style="margin-top: 12px;"><strong>Date of Birth (DOB)</strong></dt>
-          <dd>[DD Month YYYY]</dd>
-        </dl>
-      </div>
+      <p class="about-highlight">
+        Connecting people, processes and priorities through purposeful coordination.
+      </p>
 
       <div class="about-text">
         <h3>Bio</h3>
@@ -870,23 +860,71 @@
       </div>
     </div>
 
-    <div id="education" style="margin-top: 36px;">
-      <h3 style="margin-bottom: 16px;">Academic Background</h3>
+    <div class="buttons" id="education">
+      <button type="button" class="btn" aria-haspopup="dialog"
+              aria-controls="personal-dialog"
+              onclick="document.getElementById('personal-dialog').showModal()">
+        Personal Details
+      </button>
 
-      <div class="education-grid">
-        <div class="education-card">
-          <div class="label">Postgraduate</div>
-          <h4>MBA – Hospital Management</h4>
-          <p>Alagappa University</p>
-          <p>Currently pursuing</p>
-        </div>
-
-        <div class="education-card">
-          <div class="label">Undergraduate</div>
-          <h4>Bachelor of Business Administration (BBA)</h4>
-        </div>
-      </div>
+      <button type="button" class="btn btn-outline" aria-haspopup="dialog"
+              aria-controls="academic-dialog"
+              onclick="document.getElementById('academic-dialog').showModal()">
+        Academic Background
+      </button>
     </div>
+
+    <dialog id="personal-dialog" class="education-card" aria-labelledby="personal-title"
+            style="margin: auto; width: min(560px, 92%); max-height: 85vh; overflow: auto; color: var(--text);">
+      <h3 id="personal-title">Personal Details</h3>
+
+      <form method="dialog" style="margin-bottom: 16px;">
+        <button class="btn btn-outline" autofocus>Close</button>
+      </form>
+
+      <dl>
+        <dt><strong>Full name</strong></dt>
+        <dd>Boomika Sowndrarajan</dd>
+
+        <dt><strong>Date of birth (DOB)</strong></dt>
+        <dd>[21-09-2004]</dd>
+
+        <dt><strong>Age</strong></dt>
+        <dd>[22]</dd>
+      
+
+        <dt><strong>Nationality</strong></dt>
+        <dd>Indian</dd>
+
+        <dt><strong>Religion</strong></dt>
+        <dd>Hindu</dd>
+
+        <dt><strong>Residence</strong></dt>
+        <dd>Pudukottai,TamilNadu</dd>
+      </dl>
+    </dialog>
+
+    <dialog id="academic-dialog" class="education-card" aria-labelledby="academic-title"
+            style="margin: auto; width: min(560px, 92%); max-height: 85vh; overflow: auto; color: var(--text);">
+      <h3 id="academic-title">Academic Background</h3>
+
+      <form method="dialog" style="margin-bottom: 16px;">
+        <button class="btn btn-outline" autofocus>Close</button>
+      </form>
+
+      <ul style="padding-left: 20px;">
+        <li><strong>MBA in Hospital Management</strong>, Alagappa University (graduated)</li>
+        <li><strong>AP</strong> (currently pursuing)</li>
+        <li><strong>Bachelor of Business Administration (BBA),Alagappa University</strong></li>
+      </ul>
+
+      <h4 style="margin-top: 16px;">Completed Certificate Courses</h4>
+      <ul style="padding-left: 20px;">
+        <li>Digital Marketing Certificate Course</li>
+        <li>Event Management Certificate Course</li>
+        <li>Retail Management Certificate Course</li>
+      </ul>
+    </dialog>
   </div>
 </section>
     <section id="expertise" class="reveal">
